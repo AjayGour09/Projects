@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="h-[8vh] w-full bg-red-300 flex justify-between items-center px-8"
+      >
+        <h1 class="text-[18px] font-bold capitalize cursor-pointer">
+          <a href="/">image gallary</a>
+        </h1>
+        <span
+          class="w-10 border border-red-900 h-10 rounded-full bg-blue-400 cursor-pointer"
+          title="profile"
+        >
+          <img class="w-full h-full rounded-full" src="./assets/profileImage.jpeg" alt="profile image"
+        /></span>
+      </nav>
+    </header>
+    <main class="w-full bg-black/15">
+      <div
+        id="searchContainer"
+        class="w-full h-[50vh] flex flex-col sm:flex-row gap-4 items-center justify-center bg-[url('assets/background-image.webp')] bg-no-repeat bg-center bg-cover px-4"
+      >
+        <input
+          type="text"
+          name="search"
+          id="searchInput"
+          placeholder="Search for images..."
+          class="w-full sm:w-[60%] text-white py-2 px-4 bg-white/20 rounded-full outline-none text-xl placeholder-white placeholder:text-gray-300"
+        />
+
+        <button
+          id="searchBtn"
+          class="text-white cursor-pointer active:scale-[0.97] px-6 py-2 bg-white/20 rounded-full outline-none text-xl w-full sm:w-auto"
+        >
+          Search
+        </button>
+      </div>
+
+      <div id="Gallery-1" class="max-w-7xl px-4 py-8 mx-auto">
+        <div
+          id="Gallery"
+          class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 p-4"
+        ></div>
+      </div>
+    </main>
+    <script src="scripts.js" type="module"></script>
+  </body>
+</html>
